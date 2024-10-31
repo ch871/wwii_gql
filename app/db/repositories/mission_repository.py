@@ -86,3 +86,12 @@ def update_mission(mission_id, aircraft_returned, aircraft_failed, aircraft_dama
         session.commit()
         session.refresh(mission)
     return mission
+
+
+def delete_mission(mission_id):
+    with session_maker() as session:
+        mission = session.query(Mission).filter(Mission.mission_id == mission_id).first()
+        if not mission:
+            raise GraphQLError("no mission with these id")
+        session.delete(mission)
+        session.commit()

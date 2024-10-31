@@ -55,4 +55,16 @@ class UpdateMission(Mutation):
 
     @staticmethod
     def mutate(root, info, mission_id, aircraft_returned, aircraft_failed, aircraft_damaged, aircraft_lost):
-        return UpdateMission(mission=update_mission(mission_id, aircraft_returned, aircraft_failed, aircraft_damaged, aircraft_lost))
+        return UpdateMission(
+            mission=update_mission(mission_id, aircraft_returned, aircraft_failed, aircraft_damaged, aircraft_lost))
+
+
+class DeleteMission(Mutation):
+    class Arguments:
+        mission_id = Int(required=True)
+
+    mission = Field(MissionType)
+
+    @staticmethod
+    def mutate(root, info, mission_id):
+        return DeleteMission(student=delete_mission(mission_id))
