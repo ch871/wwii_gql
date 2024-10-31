@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97e9a853-f78f-4fad-85d6-bfdba64d5dab" name="Changes" comment="create target type">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="97e9a853-f78f-4fad-85d6-bfdba64d5dab" name="Changes" comment="fixt serch by (country, industry)">
+      <change afterPath="$PROJECT_DIR$/app/gql/mutation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/gql/mutations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/gql/mutations/mission_mutation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/gql/mutations/target_mutation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/models/cities_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/models/cities_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/models/missions_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/models/missions_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/models/target_types_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/models/target_types_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/db/models/targets_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/models/targets_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/db/repositories/mission_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/repositories/mission_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gql/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/gql/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gql/tipes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/gql/types/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gql/tipes/mossion_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/gql/types/mission_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gql/tipes/target_tipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/gql/types/target_type.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/gql/tipes/target_type_type.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/gql/types/target_type_type.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/db/repositories/target_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/db/repositories/target_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730380450770</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixt serch by (country, industry)">
+      <option name="closed" value="true" />
+      <created>1730385363630</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730385363630</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -162,6 +166,7 @@
     <MESSAGE value="add target and mission type" />
     <MESSAGE value="delete init db and add queries 1-3" />
     <MESSAGE value="create target type" />
-    <option name="LAST_COMMIT_MESSAGE" value="create target type" />
+    <MESSAGE value="fixt serch by (country, industry)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixt serch by (country, industry)" />
   </component>
 </project>
