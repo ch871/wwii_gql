@@ -2,7 +2,7 @@ from graphene import ObjectType, Int, List, Date, Float
 from app.db.repositories.target_repository import get_all_targets_missions
 
 
-class CountryType(ObjectType):
+class MissionType(ObjectType):
     mission_id = Int()
     mission_date = Date()
     airborne_aircraft = Float()
