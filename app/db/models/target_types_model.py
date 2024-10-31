@@ -7,3 +7,5 @@ class TargetType(Base):
     __tablename__ = "targettype"
     target_type_id = Column(Integer, primary_key=True, autoincrement=True)
     target_type_name = Column(String)
+
+    targets = relationship("Target", back_populates="target_type", lazy="immediate")
