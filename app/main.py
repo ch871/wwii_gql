@@ -5,6 +5,7 @@ from app.gql.query import Query
 
 
 app = Flask(__name__)
+
 schema = Schema(query=Query)
 
 app.add_url_rule(

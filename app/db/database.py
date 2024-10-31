@@ -6,6 +6,3 @@ engine = create_engine(DB_URL)
 session_maker = sessionmaker(bind=engine)
 
 Base = declarative_base()
-
-
-

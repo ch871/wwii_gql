@@ -13,7 +13,7 @@ class MissionType(ObjectType):
     aircraft_damaged = Float()
     aircraft_lost = Float()
 
-    targets = List("app.gql.tipes.target_tipe.TargetTipe")
+    targets = List("app.gql.tipes.target_tipe.TargetType")
 
     @staticmethod
     def resolve_targets(root, info):
