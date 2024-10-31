@@ -1,5 +1,5 @@
 from graphene import Mutation, Field, Int, String
-from app.db.repositories.mission_repository import create_mission
+from app.db.repositories.target_repository import create_target
 from app.gql.types.target_type import TargetType
 
 

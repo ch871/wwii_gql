@@ -1,3 +1,5 @@
+from graphql import GraphQLError
+
 from app.db.database import session_maker
 from app.db.models import Mission, Target, City, Country, TargetType
 
@@ -42,15 +44,15 @@ def get_mission_by_target_type(target_type):
 
 
 def create_mission(
-                   mission_id,
-                   mission_date,
-                   airborne_aircraft,
-                   attacking_aircraft,
-                   bombing_aircraft,
-                   aircraft_returned,
-                   aircraft_failed,
-                   aircraft_damaged,
-                   aircraft_lost):
+        mission_id,
+        mission_date,
+        airborne_aircraft,
+        attacking_aircraft,
+        bombing_aircraft,
+        aircraft_returned,
+        aircraft_failed,
+        aircraft_damaged,
+        aircraft_lost):
     with session_maker() as session:
         mission = Mission(
             mission_id=mission_id,
@@ -66,3 +68,21 @@ def create_mission(
         session.commit()
         session.refresh(mission)
         return mission
+
+
+def update_mission(mission_id, aircraft_returned, aircraft_failed, aircraft_damaged, aircraft_lost):
+    with session_maker() as session:
+        mission = session.query(Mission).filter(Mission.mission_id == mission_id).first()
+        if not mission:
+            raise GraphQLError("no mission with these id")
+        if aircraft_returned:
+            mission.aircraft_returned = aircraft_returned
+        if aircraft_failed:
+            mission.aircraft_failed = aircraft_failed
+        if aircraft_damaged:
+            mission.aircraft_damaged = aircraft_damaged
+        if aircraft_lost:
+            mission.aircraft_lost = aircraft_lost
+        session.commit()
+        session.refresh(mission)
+    return mission
