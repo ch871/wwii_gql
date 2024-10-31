@@ -1,4 +1,4 @@
-from graphene import ObjectType, Int, List, Date, Float
+from graphene import ObjectType, Int, List, Date, Float, Field
 from app.db.repositories.target_repository import get_all_targets_missions
 
 
@@ -13,7 +13,7 @@ class MissionType(ObjectType):
     aircraft_damaged = Float()
     aircraft_lost = Float()
 
-    targets = List("app.gql.tipes.target_tipe.TargetType")
+    targets = Field("app.gql.types.target_type.TargetType")
 
     @staticmethod
     def resolve_targets(root, info):
